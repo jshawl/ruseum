@@ -4,6 +4,7 @@ class CreatePaintings < ActiveRecord::Migration
       t.string :title
       t.string :url
       t.belongs_to :museum
+      t.belongs_to :artist
       t.timestamps
     end
   end
