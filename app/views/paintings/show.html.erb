@@ -8,7 +8,17 @@
 </p>
 
 <p>
-  <strong>Url:</strong>
+  <strong>Museum:</strong>
+  <%= link_to @painting.museum.name, @painting.museum %>
+</p>
+
+<p>
+  <strong>Artist:</strong>
+  <%= link_to @painting.artist.name, @painting.artist %>
+</p>
+
+<p>
+  <strong>Image:</strong>
   <%= image_tag @painting.url %>
 </p>
 

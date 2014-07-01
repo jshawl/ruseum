@@ -7,8 +7,17 @@
 
 <p>
   <strong>Painting:</strong>
-  <%= @artist.painting %>
+  <%= @artist.paintings.each do |painting| %>
+    <div class='painting'>
+      <%= image_tag painting.url %>
+      <span><%= painting.title %></span><br>
+      <span>Museum: <%= link_to painting.museum.name, painting.museum %></span><br>
+      <span>Artist: <%= link_to painting.artist.name, painting.artist %></span><br>
+      <td><%= link_to 'Show', painting %></td>
+    </div>
+  <% end %>
 </p>
+
 
 <%= link_to 'Edit', edit_artist_path(@artist) %> |
 <%= link_to 'Back', artists_path %>
