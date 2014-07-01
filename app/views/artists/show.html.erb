@@ -1,4 +1,3 @@
-<p id="notice"><%= notice %></p>
 
 <p>
   <strong>Name:</strong>
@@ -7,7 +6,7 @@
 
 <p>
   <strong>Painting:</strong>
-  <%= @artist.paintings.each do |painting| %>
+  <% @artist.paintings.each do |painting| %>
     <div class='painting'>
       <%= image_tag painting.url %>
       <span><%= painting.title %></span><br>

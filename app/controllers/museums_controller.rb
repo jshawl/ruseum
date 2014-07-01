@@ -10,6 +10,7 @@ class MuseumsController < ApplicationController
   # GET /museums/1
   # GET /museums/1.json
   def show
+    @paintings = Museum.find( params[:id] ).paintings
   end
 
   # GET /museums/new
