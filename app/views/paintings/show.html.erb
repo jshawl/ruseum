@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+<div class='painting'>
+
 <p>
   <strong>Title:</strong>
   <%= @painting.title %>
@@ -7,8 +9,10 @@
 
 <p>
   <strong>Url:</strong>
-  <%= @painting.url %>
+  <%= image_tag @painting.url %>
 </p>
+
 
 <%= link_to 'Edit', edit_painting_path(@painting) %> |
 <%= link_to 'Back', paintings_path %>
+</div>
