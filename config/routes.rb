@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  resources :museums
+  resources :museums do
+    resources :paintings
+  end
 
-  resources :paintings
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
