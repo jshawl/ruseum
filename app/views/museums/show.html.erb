@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @museum.title %>
+</p>
+
+<p>
+  <strong>Painting:</strong>
+  <%= @museum.painting %>
+</p>
+
+<%= link_to 'Edit', edit_museum_path(@museum) %> |
+<%= link_to 'Back', museums_path %>

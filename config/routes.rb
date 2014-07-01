@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :museums
+
   resources :paintings
 
   # The priority is based upon order of creation: first created -> highest priority.
