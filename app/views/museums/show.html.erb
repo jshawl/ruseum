@@ -2,12 +2,16 @@
 
 <p>
   <strong>Title:</strong>
-  <%= @museum.title %>
+  <%= @museum.name %>
 </p>
 
-<p>
-  <strong>Painting:</strong>
-  <%= @museum.painting %>
+<p class='painting'>
+  <strong>Paintings:</strong>
+  <% @museum.paintings.each do |p| %>
+
+     <%= image_tag p.url %>
+     <span><%= link_to p.title, p %></span>
+  <% end %>
 </p>
 
 <%= link_to 'Edit', edit_museum_path(@museum) %> |
